@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/heroesFragment2"
+        android:title="Heroes" />
+    <item android:id="@+id/matchesFragment2"
+        android:title="Matches" />
+    <item android:id="@+id/teamsFragment2"
+        android:title="Teams" />
+
+
+</menu>

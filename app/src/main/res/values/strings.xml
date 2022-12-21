@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KillReal</string>
+    <string name="splash_fragment">Splash</string>
+    <string name="login_fragment">Login</string>
+    <string name="main_fragment">Main</string>
+    <string name="matches_fragment">Matches</string>
+    <string name="teams_fragment">Teams</string>
+    <string name="heroes_fragment">Heroes</string>
+</resources>
