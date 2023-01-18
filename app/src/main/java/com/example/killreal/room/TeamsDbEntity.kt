@@ -4,7 +4,7 @@ import androidx.room.PrimaryKey
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
-import com.example.killreal.data.dataClassesResponse.TeamsListItem
+import com.example.killreal.data.teams.TeamsListItem
 
 
 @Entity(
@@ -24,7 +24,7 @@ data class TeamsDbEntity(
     val tag: String,
     val wins: Int
 ){
-    fun toTeamsListItem():TeamsListItem = TeamsListItem(
+    fun toTeamsListItem(): TeamsListItem = TeamsListItem(
         lastMatchTime = lastMatchTime,
         logoUrl = logoUrl,
         losses = losses,

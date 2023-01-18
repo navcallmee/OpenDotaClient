@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.killreal.DotaApi
-import com.example.killreal.data.dataClassesResponse.ProPlayersListItem
+import com.example.killreal.data.players.ProPlayersListItem
 import kotlinx.coroutines.*
 
 class ProPlayersViewModel:ViewModel() {

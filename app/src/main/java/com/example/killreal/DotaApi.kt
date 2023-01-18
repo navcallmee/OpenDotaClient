@@ -1,9 +1,8 @@
 package com.example.killreal
 
-import com.example.killreal.data.dataClassesResponse.HeroesListItem
-import com.example.killreal.data.dataClassesResponse.ProPlayersListItem
-import com.example.killreal.data.dataClassesResponse.TeamsListItem
-import com.example.killreal.data.dataClassesResponse.team.TeamMatchesItem
+import com.example.killreal.data.players.ProPlayersListItem
+import com.example.killreal.data.teams.TeamsListItem
+import com.example.killreal.data.teams.TeamMatchesItem
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -11,9 +10,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface DotaApi {
-
-    @GET ("constants/heroes")
-    suspend fun getHeroesList(): Response<HashMap<String, HeroesListItem>>
 
     @GET ("proPlayers")
     suspend fun getProPlayersList(): Response<List<ProPlayersListItem>>

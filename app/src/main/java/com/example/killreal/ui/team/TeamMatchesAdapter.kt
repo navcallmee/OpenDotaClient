@@ -5,9 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.killreal.data.dataClassesResponse.team.TeamMatchesItem
+import com.example.killreal.data.teams.TeamMatchesItem
 import com.example.killreal.databinding.ItemTeamMatchesBinding
-import com.google.gson.annotations.SerializedName
 
 class TeamMatchesAdapter(val context: Context, val teamMatchesList: List<TeamMatchesItem>): RecyclerView.Adapter<TeamMatchesAdapter.ViewHolder>() {
 

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.killreal.data.dataClassesResponse.TeamsListItem
+import com.example.killreal.data.teams.TeamsListItem
 import com.example.killreal.databinding.FragmentTeamsBinding
 import com.example.killreal.ui.OnNavigateCallback
 

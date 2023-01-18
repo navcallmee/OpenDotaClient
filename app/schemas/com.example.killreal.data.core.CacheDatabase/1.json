@@ -1,0 +1,202 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a2e16ff197eb95a4796f3418109133f6",
+    "entities": [
+      {
+        "tableName": "heroes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `agi_gain` REAL NOT NULL, `attack_range` INTEGER NOT NULL, `attack_rate` REAL NOT NULL, `attack_type` TEXT NOT NULL, `base_agi` REAL NOT NULL, `base_armor` REAL NOT NULL, `base_attack_max` REAL NOT NULL, `base_attack_min` REAL NOT NULL, `base_health` REAL NOT NULL, `base_health_regen` REAL NOT NULL, `base_int` REAL NOT NULL, `base_mana` REAL NOT NULL, `base_mana_regen` REAL NOT NULL, `base_mr` REAL NOT NULL, `base_str` REAL NOT NULL, `cm_enabled` INTEGER NOT NULL, `icon` TEXT NOT NULL, `img` TEXT NOT NULL, `int_gain` REAL NOT NULL, `legs` INTEGER NOT NULL, `localized_name` TEXT NOT NULL, `move_speed` INTEGER NOT NULL, `name` TEXT NOT NULL, `primary_attr` TEXT NOT NULL, `projectile_speed` INTEGER NOT NULL, `roles` TEXT NOT NULL, `str_gain` REAL NOT NULL, `turn_rate` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "agiGain",
+            "columnName": "agi_gain",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attackRange",
+            "columnName": "attack_range",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attackRate",
+            "columnName": "attack_rate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attackType",
+            "columnName": "attack_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseAgi",
+            "columnName": "base_agi",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseArmor",
+            "columnName": "base_armor",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseAttackMax",
+            "columnName": "base_attack_max",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseAttackMin",
+            "columnName": "base_attack_min",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseHealth",
+            "columnName": "base_health",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseHealthRegen",
+            "columnName": "base_health_regen",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseInt",
+            "columnName": "base_int",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseMana",
+            "columnName": "base_mana",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseManaRegen",
+            "columnName": "base_mana_regen",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseMr",
+            "columnName": "base_mr",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseStr",
+            "columnName": "base_str",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cmEnabled",
+            "columnName": "cm_enabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "icon",
+            "columnName": "icon",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "img",
+            "columnName": "img",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "intGain",
+            "columnName": "int_gain",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs",
+            "columnName": "legs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localizedName",
+            "columnName": "localized_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "moveSpeed",
+            "columnName": "move_speed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "primaryAttr",
+            "columnName": "primary_attr",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "projectileSpeed",
+            "columnName": "projectile_speed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roles",
+            "columnName": "roles",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "strGain",
+            "columnName": "str_gain",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "turnRate",
+            "columnName": "turn_rate",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a2e16ff197eb95a4796f3418109133f6')"
+    ]
+  }
+}

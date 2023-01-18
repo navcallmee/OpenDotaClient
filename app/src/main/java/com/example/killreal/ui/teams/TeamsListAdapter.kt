@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide;
-import com.example.killreal.data.dataClassesResponse.TeamsListItem
+import com.example.killreal.data.teams.TeamsListItem
 import com.example.killreal.databinding.ItemTeamsListBinding
 import com.example.killreal.ui.OnNavigateCallback
 

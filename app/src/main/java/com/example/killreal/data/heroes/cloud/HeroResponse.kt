@@ -1,8 +1,8 @@
-package com.example.killreal.data.dataClassesResponse
+package com.example.killreal.data.heroes.cloud
 
 import com.google.gson.annotations.SerializedName
 
-data class HeroesListItem(
+data class HeroResponse(
     @SerializedName("agi_gain")
     val agiGain: Double,
     @SerializedName("attack_range")
@@ -54,5 +54,5 @@ data class HeroesListItem(
     @SerializedName("str_gain")
     val strGain: Double,
     @SerializedName("turn_rate")
-    val turnRate: String
+    val turnRate: String?
 )

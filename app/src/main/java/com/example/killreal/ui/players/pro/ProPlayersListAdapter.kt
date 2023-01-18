@@ -5,12 +5,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide;
 import com.example.killreal.R
-import com.example.killreal.data.dataClassesResponse.ProPlayersListItem
+import com.example.killreal.data.players.ProPlayersListItem
 import com.example.killreal.databinding.ItemPlayersProBinding
-import com.example.killreal.databinding.ItemTeamsListBinding
-import com.example.killreal.ui.teams.TeamsListAdapter
 
 class ProPlayersListAdapter(val context: Context, val proPlayersList: List<ProPlayersListItem>): RecyclerView.Adapter<ProPlayersListAdapter.ViewHolder>() {
 

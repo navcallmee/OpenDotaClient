@@ -1,4 +1,4 @@
-package com.example.killreal.data.dataClassesResponse.team
+package com.example.killreal.data.teams
 
 import com.google.gson.annotations.SerializedName
 

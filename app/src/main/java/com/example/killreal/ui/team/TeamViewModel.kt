@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.killreal.DotaApi
-import com.example.killreal.data.dataClassesResponse.team.TeamMatchesItem
+import com.example.killreal.data.teams.TeamMatchesItem
 import kotlinx.coroutines.*
 
 class TeamViewModel : ViewModel() {

@@ -3,30 +3,18 @@ package com.example.killreal.ui.heroes
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.killreal.DotaApi
-import com.example.killreal.data.dataClassesResponse.HeroesListItem
-import kotlinx.coroutines.*
+import com.example.killreal.domain.GetAllHeroUseCase
+import com.example.killreal.ui.heroes.adapter.Hero
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class HeroesViewModel:ViewModel() {
-    val hero = MutableLiveData<List<HeroesListItem>>()
+class HeroesViewModel(
+    private val getAllHeroUseCase: GetAllHeroUseCase
+) : ViewModel() {
 
-    val coroutineExceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->
-        throwable.printStackTrace()
-    }
-    fun CoroutineScope.safeLaunch(
-        exceptionHandler: CoroutineExceptionHandler = coroutineExceptionHandler,
-        launchBody: suspend () -> Unit
-    ): Job {
-        return this.launch(exceptionHandler) {
-            withContext(Dispatchers.IO){
-                launchBody.invoke()
-            }
-        }
-    }
+    val hero = MutableLiveData<List<Hero>>()
 
-    fun getHero() = viewModelScope.safeLaunch(){
-
-        val response = DotaApi.getInstance().getHeroesList()
-        hero.postValue(response.body()!!.toList().map { it.second })
+    fun getHero() = viewModelScope.launch(Dispatchers.IO) {
+        hero.postValue(getAllHeroUseCase.getAllUseCase())
     }
 }
