@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/iVTeamIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tVTeamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="localized_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toEndOf="@+id/iVTeamIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tVTeamLosses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="primary_attr"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/iVTeamIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tVTeamWins" />
+
+    <TextView
+        android:id="@+id/tVTeamLastMatchTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="attack_type"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/iVTeamIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tVTeamLosses" />
+
+    <TextView
+        android:id="@+id/tVTeamWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="roles"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/iVTeamIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tVTeamName" />
+
+    <TextView
+        android:id="@+id/tVTeamRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="legs"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/iVTeamIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tVTeamLastMatchTime" />
+</androidx.constraintlayout.widget.ConstraintLayout>

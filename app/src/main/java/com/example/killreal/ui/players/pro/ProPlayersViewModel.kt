@@ -1,19 +1,15 @@
-package com.example.killreal
+package com.example.killreal.ui.players.pro
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.killreal.data.heroesDataClasses.HeroesListItem
+import com.example.killreal.DotaApi
+import com.example.killreal.data.dataClassesResponse.ProPlayersListItem
 import kotlinx.coroutines.*
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
-class MainActivityViewModel:ViewModel() {
+class ProPlayersViewModel:ViewModel() {
+    val proPlayer = MutableLiveData<List<ProPlayersListItem>>()
 
-    val hero = MutableLiveData<List<HeroesListItem>>()
-
-    //errorCatcher
     val coroutineExceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->
         throwable.printStackTrace()
     }
@@ -28,8 +24,8 @@ class MainActivityViewModel:ViewModel() {
         }
     }
 
-    fun getHero() = viewModelScope.safeLaunch(){
-        val response = DotaApi.getInstanceqq().getData()
-        hero.postValue(response.body()!!.toList().map { it.second })
+    fun getProPlayers() = viewModelScope.safeLaunch(){
+        val response = DotaApi.getInstance().getProPlayersList()
+        proPlayer.postValue(response.body()!!.toList())
     }
 }

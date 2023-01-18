@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".screens.MainFragment">
+    tools:context=".ui.MainFragment">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/mainContainerView"
@@ -21,7 +21,7 @@
         />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/mainBottomNAvigationView"
+        android:id="@+id/mainBottomNavigationView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?android:attr/windowBackground"

@@ -6,4 +6,6 @@
     <string name="matches_fragment">Matches</string>
     <string name="teams_fragment">Teams</string>
     <string name="heroes_fragment">Heroes</string>
+    <string name="players_pro_fragment">Pro Players</string>
+    <string name="item_teams_tVTeamLosses">Losses</string>
 </resources>

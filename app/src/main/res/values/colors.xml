@@ -7,4 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="items_team_list_tVTeamWins">#25E044</color>
+    <color name="items_team_list_tVTeamLosses">#F73A2C</color>
 </resources>

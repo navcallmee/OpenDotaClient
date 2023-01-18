@@ -4,9 +4,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".screens.SplashFragment">
+    tools:context=".ui.">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/ic_fragment_teams_header"
+        app:layout_constraintBottom_toTopOf="@+id/rVTeams"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tVTeamsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fragment_teams_header"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/tVTeamsWinRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Win/Lose"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fragment_teams_header"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.431" />
+
+    <TextView
+        android:id="@+id/tVTeamsWinRate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fragment_teams_header"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.447" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/teams_fragment"
@@ -15,4 +68,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rVTeams"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

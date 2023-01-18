@@ -1,18 +1,18 @@
-package com.example.killreal
+package com.example.killreal.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.killreal.databinding.ActivityMainBinding
-import com.example.killreal.viewModels.HeroesViewModel
+import com.example.killreal.ui.heroes.HeroesListAdapter
+import com.example.killreal.ui.heroes.HeroesViewModel
 
 class MainActivity : AppCompatActivity() {
 
     private val  viewModel = HeroesViewModel()
 
     //recycler
-    lateinit var myAdapter: MyAdapter
+    lateinit var heroesListAdapter: HeroesListAdapter
     lateinit var gridLayoutManager: LinearLayoutManager
 
     //viewbinding
@@ -23,13 +23,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        /*binding.recyclerviewUsers.layoutManager = gridLayoutManager
-
-        viewModel.hero.observe(this) {
-            binding.recyclerviewUsers.adapter = MyAdapter(baseContext,it)
-        }*/
-        
-
     }
 }

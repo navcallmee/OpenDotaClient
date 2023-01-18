@@ -1,21 +1,22 @@
-package com.example.killreal
+package com.example.killreal.ui.players.pro
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.killreal.data.heroesDataClasses.HeroesListItem
 import com.bumptech.glide.Glide;
-import com.example.killreal.databinding.ActivityMainBinding
-import com.example.killreal.databinding.RecyclerviewItemBinding
+import com.example.killreal.R
+import com.example.killreal.data.dataClassesResponse.ProPlayersListItem
+import com.example.killreal.databinding.ItemPlayersProBinding
+import com.example.killreal.databinding.ItemTeamsListBinding
+import com.example.killreal.ui.teams.TeamsListAdapter
 
-class MyAdapter(val context: Context, val userList: List<HeroesListItem>): RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class ProPlayersListAdapter(val context: Context, val proPlayersList: List<ProPlayersListItem>): RecyclerView.Adapter<ProPlayersListAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(binding:ItemPlayersProBinding):RecyclerView.ViewHolder(binding.root) {
         var iVNewHeroIcon: ImageView = itemView.findViewById(R.id.iVNewHeroIcon)
+
         /*var tVHeroName: TextView = itemView.findViewById(R.id.tVHeroName)
         var tVHeroRoles: TextView = itemView.findViewById(R.id.tVHeroRoles)
         var tVHeroPrimaryAttr: TextView = itemView.findViewById(R.id.tVHeroPrimaryAttr)
@@ -24,27 +25,17 @@ class MyAdapter(val context: Context, val userList: List<HeroesListItem>): Recyc
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_hero_avatars,parent,false))
-    }
-
-    enum class Hero(val heroName: String){
-        AntiMage("Anti-Mage"),
-        Abaddon("Abaddon"),
-        Axe("Axe")
+        return ProPlayersListAdapter.ViewHolder(
+            ItemPlayersProBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        /*try {
-            when(Hero.valueOf(userList[position].localizedName)) {
-                Hero.AntiMage -> holder.iVHeroIcon.setImageResource(R.drawable.antimage)
-                Hero.Abaddon -> holder.iVHeroIcon.setImageResource(R.drawable.abaddon)
-                Hero.Axe -> holder.iVHeroIcon.setImageResource(R.drawable.axe)
-            }
-        }
-        catch (e:java.lang.Exception){
-            holder.iVHeroIcon.setImageResource(R.drawable.alchemist)
-        }*/
-        Glide.with(holder.iVNewHeroIcon).load("https://api.opendota.com${userList[position].img}").into(holder.iVNewHeroIcon)
+        //Glide.with(holder.iVNewHeroIcon).load("https://api.opendota.com${userList[position].img}").into(holder.iVNewHeroIcon)
         /*Glide.with(holder.iVHeroIcon).load("https://api.opendota.com${userList[position].img}").into(holder.iVHeroIcon)
         holder.tVHeroName.text = userList[position].localizedName
         holder.tVHeroRoles.text = userList[position].roles.toString()
@@ -54,6 +45,6 @@ class MyAdapter(val context: Context, val userList: List<HeroesListItem>): Recyc
     }
 
     override fun getItemCount(): Int {
-        return userList.size
+        return proPlayersList.size
     }
 }

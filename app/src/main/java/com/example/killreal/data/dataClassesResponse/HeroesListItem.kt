@@ -1,6 +1,5 @@
-package com.example.killreal.data.heroesDataClasses
+package com.example.killreal.data.dataClassesResponse
 
-import com.example.killreal.databinding.RecyclerviewItemBinding
 import com.google.gson.annotations.SerializedName
 
 data class HeroesListItem(

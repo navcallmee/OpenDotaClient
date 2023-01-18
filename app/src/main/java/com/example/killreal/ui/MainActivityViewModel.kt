@@ -1,15 +1,17 @@
-package com.example.killreal.viewModels
+package com.example.killreal.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.killreal.DotaApi
-import com.example.killreal.data.heroesDataClasses.HeroesListItem
+import com.example.killreal.data.dataClassesResponse.HeroesListItem
 import kotlinx.coroutines.*
 
-class HeroesViewModel:ViewModel() {
+class MainActivityViewModel:ViewModel() {
+
     val hero = MutableLiveData<List<HeroesListItem>>()
 
+    //errorCatcher
     val coroutineExceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->
         throwable.printStackTrace()
     }
@@ -25,8 +27,7 @@ class HeroesViewModel:ViewModel() {
     }
 
     fun getHero() = viewModelScope.safeLaunch(){
-
-        val response = DotaApi.getInstanceqq().getData()
+        val response = DotaApi.getInstance().getHeroesList()
         hero.postValue(response.body()!!.toList().map { it.second })
     }
 }
